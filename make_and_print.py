@@ -5,7 +5,7 @@
 
 from PyPDF2 import PdfReader, PdfWriter
 import datetime as time
-import os
+import pathlib as pl
 
 
 def making_pdf(data, path):
@@ -25,4 +25,4 @@ def making_pdf(data, path):
         writer.write(out)
     print("New Files Are Ready")
     print("Path to file: {}".format(output_filename))
-    print("Absolute Path: {}".format(os.path.abspath(output_filename)))
+    print("Absolute Path: {}".format(pl.Path(output_filename)))
