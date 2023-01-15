@@ -15,8 +15,8 @@ from pathlib import Path
 # path = "pdf_dir/бокс (1).pdf"
 # path = "pdf_dir/бокс (2).pdf"
 # path = "pdf_dir/бокс (3).pdf"
-# path = "pdf_dir/сдек (1).pdf"
-path = "pdf_dir/сдек (2).pdf"
+path = "pdf_dir/сдек (1).pdf"
+# path = "pdf_dir/сдек (2).pdf"
 # path = "/Users/antonkuzmichev/PycharmProjects/PDF-converter/pdf_dir/бокс (1).pdf"
 # path = "file:/Users/antonkuzmichev/PycharmProjects/PDF-converter/pdf_dir/бокс%20(1).pdf" #WTF
 # path = "/Users/antonkuzmichev/PycharmProjects/PDF-converter/pdf_dir/бокс\\ \\(1\\).pdf"
