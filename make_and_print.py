@@ -5,6 +5,7 @@
 
 from PyPDF2 import PdfReader, PdfWriter
 import datetime as time
+import os
 
 
 def making_pdf(data, path):
@@ -12,7 +13,7 @@ def making_pdf(data, path):
     reader = PdfReader(path)
     writer = PdfWriter()
     num_pages = len(reader.pages)
-    print("Page count: " + str(num_pages) + "\nLength of line: " + str(len(data)))
+    # print("Page count: " + str(num_pages) + "\nLength of line: " + str(len(data)))
 
     for page in data:
         # current_page = reader.getPage(page)
@@ -23,3 +24,5 @@ def making_pdf(data, path):
     with open(output_filename, "wb") as out:
         writer.write(out)
     print("New Files Are Ready")
+    print("Path to file: {}".format(output_filename))
+    print("Absolute Path: {}".format(os.path.abspath(output_filename)))

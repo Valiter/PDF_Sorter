@@ -31,7 +31,7 @@ def int_sorter(data):
 # Какая-то фигня. Код и так, и эдак работает корректно... Вроде как. Уже не соображаю.
     list_of_nums = sorted_data.keys()
 
-    print(sorted_data)
+    # print(sorted_data)
     return sorted_data, list_of_nums
 
 
@@ -87,9 +87,9 @@ def matrix_fin_line(data):
                 cycle_counter += 1
             else:
                 print("Sort mistake")
-                print(matrix)
+                # print(matrix)
 
         print("Sorting is finished")
-        print(matrix)
+        # print(matrix)
 
     return matrix

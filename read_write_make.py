@@ -80,8 +80,8 @@ def pdf_reader_func(path):
         file.close()
         counter += 1
 
-    print(ls_file)
-    print(ls_word)
+    # print(ls_file)
+    # print(ls_word)
     return num_pages, ls_word
 
 
@@ -101,5 +101,5 @@ def making_line(matrix_data):
             row_index += 1
         row_index = 0
         row_length += 1
-    print(new_line)
+    # print(new_line)
     return new_line
