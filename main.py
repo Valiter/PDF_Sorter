@@ -20,7 +20,7 @@ from pathlib import Path
 # path = "pdf_dir/сдек (1).pdf"
 # path = "pdf_dir/сдек (2).pdf"
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
     # print("Please, drag and drop needed file: ")
     # user_inp = sys.stdin.readline()
@@ -29,9 +29,9 @@ if __name__ == "__main__":
     #     # path = sys.argv[1]
     #     path = user_inp
 
-    if len(sys.argv) > 1:
 
-        path = sys.argv[1]
+def main(path):
+    if path:
 
         page_count, list_of_names = read_write_make.pdf_reader_func(path)
 

@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import (QTreeView, QFileSystemModel, QApplication, QMainWindow, QLabel, QWidget,
-                             QVBoxLayout, QListWidget)
+                             QVBoxLayout, QListWidget, QPushButton)
 from PyQt5.QtCore import QDir
-
+import main
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -36,7 +36,8 @@ class MainWindow(QMainWindow):
         central_widget.setLayout(main_layout)
 
         self.setCentralWidget(central_widget)
-
+        # button1 = QPushButton("Button1", self)
+        # button1.clicked.connect(self.buttonCliched)
         self._update_states()
 
     def _update_states(self):
@@ -58,10 +59,15 @@ class MainWindow(QMainWindow):
         for url in event.mimeData().urls():
             file_name = url.toLocalFile()
             self.list_files.addItem(file_name)
+            main.main(file_name)
 
         self._update_states()
 
         return super().dropEvent(event)
+
+    # def buttonCliched(self):
+    #     c = self.list_files
+    #     self.list_files
 
 
 if __name__ == '__main__':
