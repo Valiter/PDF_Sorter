@@ -25,4 +25,4 @@ def making_pdf(data, path):
         writer.write(out)
     print("New Files Are Ready")
     print("Path to file: {}".format(output_filename))
-    print("Absolute Path: {}".format(pl.Path(output_filename)))
+    print("Absolute Path: {}".format(pl.PurePath(output_filename)))
