@@ -1,7 +1,31 @@
 from PyQt5.QtWidgets import (QTreeView, QFileSystemModel, QApplication, QMainWindow, QLabel, QWidget,
                              QVBoxLayout, QListWidget, QPushButton)
 from PyQt5.QtCore import QDir
-import main
+
+import read_write_make
+import dict_maker
+import sorter_module
+import make_and_print
+
+
+def main(path):
+    if path:
+
+        page_count, list_of_names = read_write_make.pdf_reader_func(path)
+
+        dictionary = dict_maker.dictionary_maker(page_count, list_of_names)
+
+        sorted_dictionary, list_of_keys = sorter_module.int_sorter(dictionary)
+
+        matrix = sorter_module.matrix_fin_line(list_of_keys)
+
+        data = read_write_make.making_line(matrix)
+
+        make_and_print.making_pdf(data, path)
+
+    else:
+        print("No file found in arguments!")
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -59,7 +83,7 @@ class MainWindow(QMainWindow):
         for url in event.mimeData().urls():
             file_name = url.toLocalFile()
             self.list_files.addItem(file_name)
-            main.main(file_name)
+            main(file_name)
 
         self._update_states()
 
