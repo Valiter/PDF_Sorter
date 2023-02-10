@@ -32,6 +32,8 @@ def word_and_num_seeker(page_text):
             if find == 0:
                 returning_info = element
                 returning_info = returning_info[5:]
+            else:
+                returning_info = "None"
 
         counter += 1
 
@@ -73,9 +75,9 @@ def pdf_reader_func(path):
         txt_length = len(txt)
         ls_file.append(txt_length)
 
-        tl = word_and_num_seeker(txt)
+        body = word_and_num_seeker(txt)
 
-        ls_word.append(tl)
+        ls_word.append(body)
 
         file.close()
         counter += 1
